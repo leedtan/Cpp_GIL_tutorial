@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Build directories
+build/
+dist/
+
+# Python egg files and caches
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pyre type checker
+.pyre/
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer artifacts
+.installed.cfg
+*.egg
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Ignore build artifacts
+*.o
+*.obj
+*.dll
+*.pyc
+*.pyo
+*.pyd
+*.a
+*.lib
+*.so
+
+# Compiled output
+*.out
+
+# IDE directories
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Custom ignores for this project
+src/*.so
