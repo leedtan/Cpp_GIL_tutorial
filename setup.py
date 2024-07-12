@@ -1,9 +1,8 @@
 import os
 import shutil
-
-from setuptools import Extension, setup
+from setuptools import setup, Extension
 from setuptools.command.build_ext import build_ext as build_ext_orig
-
+import nanobind
 
 class build_ext(build_ext_orig):
     def run(self):
@@ -15,7 +14,14 @@ class build_ext(build_ext_orig):
             dst = os.path.join('src', filename)
             shutil.move(src, dst)
 
-module = Extension("hello", sources=["src/hello.cpp"])
+module = Extension(
+    "hello",
+    sources=["src/hello.cpp"],
+    include_dirs=[os.path.join(os.path.dirname(nanobind.__file__), 'include')],
+    library_dirs=[os.path.join(os.path.dirname(nanobind.__file__), 'lib')],
+    libraries=["nanobind"],
+    language='c++'
+)
 
 setup(
     name="hello",
